@@ -5,6 +5,7 @@
   color: var(--secondary-color);
   position: sticky;
   top: 0;
+  width: 100%;
   background-color: var(--bgc);
   opacity: 0.9;
   z-index: 1000;
@@ -72,7 +73,6 @@
     margin-left: 0;
   }
   .navbar {
-    position: fixed;
     justify-content: center;
   }
   .menu-icon {
