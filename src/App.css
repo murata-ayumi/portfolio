@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  width: 100vw;
   font-family: var(--biz-font);
   background-color: var(--bgc);
   overflow-x: hidden;
