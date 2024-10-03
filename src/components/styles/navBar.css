@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   width: 100%;
+  height: auto;
   background-color: var(--bgc);
   opacity: 0.9;
   z-index: 1000;
@@ -44,6 +45,7 @@
   list-style: none;
   top: 0;
   left: 0;
+  height: auto;
 }
 .nav-links:last-child {
   margin-right: 20px;
