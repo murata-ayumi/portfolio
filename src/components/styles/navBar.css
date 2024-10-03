@@ -109,6 +109,8 @@
     margin: 0;
     opacity: 1;
     z-index: 1000;
+    width: 100vw;
+    height: auto;
   }
 
   .nav-links li {
