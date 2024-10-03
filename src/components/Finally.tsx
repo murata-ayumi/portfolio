@@ -31,15 +31,8 @@ const Finally = () => {
           viewport={{ once: false, amount: 0 }}
           className="finally-text"
         >
-          react-icons framer-motion react-modal
-        </motion.p>
-        <motion.p
-          variants={fadeIn('right', 1, 'spring', 1)}
-          initial="hidden"
-          whileInView={'show'}
-          viewport={{ once: false, amount: 0 }}
-          className="finally-text"
-        >
+          react-icons framer-motion react-modal body-scroll-lock.js
+          <br />
           最後までご覧いただきありがとうございます
         </motion.p>
       </div>
