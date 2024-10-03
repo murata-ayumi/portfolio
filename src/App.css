@@ -25,6 +25,7 @@ body {
   margin: 0;
   font-family: var(--biz-font);
   background-color: var(--bgc);
+  overflow-x: hidden;
 }
 
 section {
