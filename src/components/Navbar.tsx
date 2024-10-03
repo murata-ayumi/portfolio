@@ -18,18 +18,21 @@ const Navbar: React.FC = () => {
 
   // メニューの状態に応じてbodyにno-scrollクラスを追加・削除
   useEffect(() => {
+    console.log(`Menu isOpen: ${isOpen}`);
+    console.log('Current body classes:', document.body.classList);
+
     if (isOpen) {
+      console.log('Adding no-scroll class');
       document.body.classList.add('no-scroll');
     } else {
+      console.log('Removing no-scroll class');
       document.body.classList.remove('no-scroll');
     }
 
-    // クリーンアップ
     return () => {
       document.body.classList.remove('no-scroll');
     };
   }, [isOpen]);
-
   return (
     <motion.nav
       variants={fadeIn('down', 0.9, 'spring', 1.5, 0.6)}

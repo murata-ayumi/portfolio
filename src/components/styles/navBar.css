@@ -68,8 +68,8 @@
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
 }
-.no-scroll {
-  overflow: hidden;
+body.no-scroll {
+  position: fixed;
 }
 
 /* スマートフォンサイズのためのメディアクエリ */
@@ -130,6 +130,6 @@
     cursor: pointer;
   }
   .no-scroll {
-    overflow: hidden;
+    position: fixed;
   }
 }
