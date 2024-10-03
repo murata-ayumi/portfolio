@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   color: var(--secondary-color);
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: var(--bgc);
   opacity: 0.9;
@@ -72,6 +72,7 @@
     margin-left: 0;
   }
   .navbar {
+    position: fixed;
     justify-content: center;
   }
   .menu-icon {
