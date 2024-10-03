@@ -111,6 +111,7 @@
     z-index: 1000;
     width: 100vw;
     height: 100%;
+    overflow: hidden;
   }
 
   .nav-links li {
