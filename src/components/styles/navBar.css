@@ -42,6 +42,7 @@
 /* ナビゲーションリンクのスタイル */
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
   top: 0;
   left: 0;
@@ -81,6 +82,8 @@
   }
   .navbar {
     justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
   }
   .menu-icon {
     position: absolute;
@@ -98,7 +101,6 @@
     background-color: #333;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     transform: translateX(100%); /* 初期状態では画面外 */
     transition: transform 0.3s ease;
     z-index: 1000; /* ナビゲーションバーの上に表示 */

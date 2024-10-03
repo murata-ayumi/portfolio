@@ -18,6 +18,7 @@
 a {
   text-decoration: none;
 }
+html,
 body {
   display: flex;
   flex-direction: column;
