@@ -1,0 +1,98 @@
+#gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 20px;
+  margin-top: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+.gallery-item {
+  display: grid;
+  place-items: center;
+  grid-template-rows: subgrid;
+  gap: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem);
+  grid-row: span 3;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gallery-item img {
+  display: grid;
+  grid-row: 2;
+  width: calc(100% * 0.9);
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 10px;
+}
+.gallery-item h3 {
+  display: grid;
+  grid-row: 1;
+  text-align: center;
+  font-size: clamp(1rem, 0.958rem + 0.22vw, 1.125rem);
+  color: var(--secondary-color);
+  margin-top: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem);
+}
+
+.gallery-item .items-text {
+  display: grid;
+  grid-row: 3;
+  place-items: start;
+}
+.items-text {
+  margin: 0 5px;
+}
+.items-text p:first-child {
+  color: gray;
+}
+.items-text p {
+  font-size: clamp(0.75rem, 0.708rem + 0.22vw, 0.875rem);
+  color: var(--secondary-color);
+  margin-top: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem);
+}
+.items-text div a {
+  display: flex;
+  position: relative;
+  color: var(--secondary-color);
+}
+.git-icon,
+.domain-icon {
+  margin-top: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem);
+  margin-right: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem);
+  font-size: 16px;
+}
+.items-text div:last-child a {
+  margin-bottom: clamp(0.938rem, 0.833rem + 0.56vw, 1.25rem);
+}
+.items-text div a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: calc(100% + 1.5px);
+  height: 2px;
+  border-radius: 0.5px;
+  background: var(--primary-color);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.items-text div a:hover::after {
+  transform: scale(1, 1);
+}
+@media (max-width: 768px) {
+  .gallery-container {
+    margin-inline: 20px;
+  }
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+:root {
+  --primary-color: #fc51b7;
+  --secondary-color: #eee;
+  --bgc: #100d18;
+  --dot-font: 'DotGothic16', sans-serif;
+  --biz-font: 'BIZ UDPGothic', sans-serif;
+  --zen-font: 'Zen Kurenaido', sans-serif;
+  --dancing-font: 'Dancing Script', cursive;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  font-family: var(--biz-font);
+  background-color: var(--bgc);
+}
+body:has(.nav-links.active) {
+  overflow: hidden;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: clamp(6.125rem, 5.25rem + 4.67vw, 8.75rem);
+  z-index: -1;
+}

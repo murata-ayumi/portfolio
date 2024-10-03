@@ -1,0 +1,23 @@
+.finally {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: auto;
+  margin-top: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+  margin-bottom: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+
+.finally .finally-text {
+  display: block;
+  font-size: clamp(1.125rem, 1.083rem + 0.22vw, 1.25rem);
+  color: var(--secondary-color);
+  font-family: var(--zen-font);
+  line-height: 150%;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  height: auto;
+  text-align: justify;
+  margin-inline: 20px;
+}

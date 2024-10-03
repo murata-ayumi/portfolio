@@ -1,0 +1,121 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--bgc);
+  opacity: 0.9;
+  z-index: 1000;
+}
+
+.logo {
+  width: clamp(5rem, 4.167rem + 4.44vw, 7.5rem);
+  height: auto;
+  margin-top: clamp(0.5rem, 0.25rem + 1.33vw, 1.25rem);
+  margin-left: 20px;
+}
+
+/* メニューアイコンのスタイル */
+.menu-icon,
+.close-icon {
+  display: none; /* デスクトップサイズでは非表示 */
+  cursor: pointer;
+}
+.menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* ナビゲーションリンクのスタイル */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links:last-child {
+  margin-right: 20px;
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+}
+
+/* スマートフォンサイズのためのメディアクエリ */
+@media (max-width: 768px) {
+  .menu-icon,
+  .close-icon {
+    display: block; /* スマホサイズでは表示 */
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .menu-icon {
+    position: absolute;
+    right: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(150%); /* 初期状態では画面外 */
+    transition: transform 0.3s ease;
+    z-index: 1000; /* ナビゲーションバーの上に表示 */
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+    margin: 0;
+    opacity: 1;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  /* 閉じるボタンのスタイル */
+  .close-icon {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+
+    cursor: pointer;
+  }
+}

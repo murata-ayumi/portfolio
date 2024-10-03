@@ -1,0 +1,164 @@
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.insta-area-inner p,
+.modal-area p {
+  font-size: clamp(1.125rem, 1.083rem + 0.22vw, 1.25rem);
+  color: var(--secondary-color);
+  font-family: var(--zen-font);
+  line-height: 150%;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+.insta-area-inner i,
+.modal-area i {
+  font-size: clamp(1.125rem, 1.083rem + 0.22vw, 1.25rem);
+  color: var(--secondary-color);
+  font-family: var(--dancing-font);
+  line-height: 150%;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: auto;
+  margin-top: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+.insta-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+.insta-area-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+.insta-area-inner > a {
+  display: flex;
+  position: relative;
+  color: var(--secondary-color);
+}
+.insta-area-inner > a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: calc(100% + 1.5px);
+  height: 2px;
+  border-radius: 0.5px;
+  background: var(--primary-color);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.insta-area-inner > a:hover::after {
+  transform: scale(1, 1);
+}
+.insta-area-inner .insta-icon {
+  color: var(--secondary-color);
+  font-size: clamp(1rem, 0.708rem + 1.56vw, 1.875rem);
+  margin-right: 5px;
+}
+.insta-url {
+  color: var(--secondary-color);
+  font-size: clamp(0.75rem, 0.667rem + 0.44vw, 1rem);
+  display: flex;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
+  height: auto;
+  text-align: justify;
+  align-items: center;
+}
+.dialog-area {
+  display: flex;
+  background-color: var(--bgc);
+}
+.my-insta-qr {
+  width: 100%; /* 画像の幅をダイアログに合わせる */
+  height: auto;
+}
+.modal-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.shiba-image {
+  display: inline-block;
+  width: clamp(9.375rem, 3.125rem + 33.33vw, 28.125rem);
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  object-fit: cover;
+  margin-right: clamp(0.625rem, 0.313rem + 1.67vw, 1.563rem);
+}
+.open-btn,
+.close-btn {
+  padding: clamp(0.313rem, 0.208rem + 0.56vw, 0.625rem)
+    clamp(0.625rem, 0.417rem + 1.11vw, 1.25rem);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: clamp(0.875rem, 0.833rem + 0.22vw, 1rem);
+  font-weight: bold;
+  font-family: var(--biz-font);
+  transition: all 0.3s ease;
+}
+.close-btn {
+  margin-top: 5px;
+}
+.open-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+body.modal-open {
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .insta-area-inner p,
+  .modal-area p {
+    margin-bottom: 0;
+  }
+  .shiba-image {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .ReactModal__Content {
+    width: 90% !important;
+    margin: 0 auto;
+    position: fixed;
+  }
+  .insta-area {
+    margin-block: 10px;
+    margin-left: 0;
+  }
+}
