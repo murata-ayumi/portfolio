@@ -64,6 +64,9 @@
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 /* スマートフォンサイズのためのメディアクエリ */
 @media (max-width: 768px) {

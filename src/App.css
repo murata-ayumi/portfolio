@@ -26,9 +26,7 @@ body {
   font-family: var(--biz-font);
   background-color: var(--bgc);
 }
-body:has(.nav-links.active) {
-  overflow: hidden;
-}
+
 section {
   display: flex;
   flex-direction: column;

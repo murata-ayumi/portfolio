@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants/fadeIn';
 import './styles/navBar.css';
@@ -15,6 +15,20 @@ const Navbar: React.FC = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  // メニューの状態に応じてbodyにno-scrollクラスを追加・削除
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // クリーンアップ
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isOpen]);
 
   return (
     <motion.nav
@@ -69,4 +83,5 @@ const Navbar: React.FC = () => {
     </motion.nav>
   );
 };
+
 export default Navbar;
