@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: clamp(6.125rem, 5.25rem + 4.67vw, 8.75rem);
+  padding-top: clamp(6.125rem, 5.25rem + 4.67vw, 8.75rem);
   margin-left: 5px;
 }
 .hero-text {
