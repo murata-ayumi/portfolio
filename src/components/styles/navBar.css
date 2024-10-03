@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   color: var(--secondary-color);
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: var(--bgc);
   opacity: 0.9;
