@@ -3,9 +3,10 @@
   justify-content: space-around;
   align-items: center;
   color: var(--secondary-color);
-  position: sticky;
+  position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   height: auto;
   background-color: var(--bgc);
   opacity: 0.9;
@@ -112,7 +113,6 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
 
   .nav-links li {
@@ -128,5 +128,8 @@
     right: 1.5rem;
 
     cursor: pointer;
+  }
+  .no-scroll {
+    overflow: hidden;
   }
 }
