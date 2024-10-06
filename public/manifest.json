@@ -13,10 +13,24 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#F3AAE6",
-  "background_color": "#F3AAE6"
+  "background_color": "#F3AAE6",
+  "form_factor": "none",
+  "screenshots": [
+    {
+      "src": "../screenshots/screenshot1.png",
+      "sizes": "1920x1080",
+      "type": "image/png"
+    }
+  ]
 }
