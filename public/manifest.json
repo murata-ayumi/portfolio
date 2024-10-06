@@ -28,7 +28,7 @@
   "form_factor": "none",
   "screenshots": [
     {
-      "src": "../screenshots/screenshot1.png",
+      "src": "./screenshot1.png",
       "sizes": "1920x1080",
       "type": "image/png"
     }
